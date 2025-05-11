@@ -1,0 +1,54 @@
+A = (F1+F2)(A’BC’) + Treset'(AB'C' + ABC' + ABC + AB'C)
+
+B = 2'(A'B'C') + ((F1.F2)+(F1’.F2’))(A’BC’) + Treset(AB'C') + (Treset + 12) (AB’C) + (ABC' + A'BC + ABC)
+
+C = 2(A'B'C') + (A'B'C) + F2’(A’BC’) + Treset' (A'BC + AB'C + ABC)
+
+
+Led1 = 1(A’B’C + A'BC) + 4(AB'C' + ABC') + 3(AB'C) 
+Led2 = 2(A’B’C + A'BC) + 1(AB'C') + 4(AB'C + ABC) + 3(ABC')
+Led3 = 3(A’B’C + A'BC) + 2(AB'C' + ABC') + 1(AB'C + ABC)
+Led4 = 4(A’B’C + A'BC) + 3(AB'C') + 2(AB'C + ABC) + 1(ABC')
+
+
+
+
+
+----- Flags: 
+F1 = 1’2’3’4 + 1’2’34’ 
+F2 = 1’2’3’4 + 1’23’4’  
+Use a flipflop to store the values with an enabler of 
+en = (12'3'4' + 1'23'4' + 1'2'34' + 1'2'3'4)
+
+
+
+
+----- 555 timer: normal clock of 1 second, for when all switches are 0 wait for 4 seconds:
+
+I = (1 + 2 + 3 + 4)' (A'B'C' + A'B'C + A'BC')'
+A = AI + BI
+B = AI + B'I
+
+Treset = ABI
+
+(Different flip flops here)
+
+
+----- 7-segment equations:
+a=B'
+b=1
+c=(B'C')'
+d=B'
+e=B'C'
+f=BC'
+g=A
+
+----- Decoder outputs
+A'B'C' 000
+A'B'C  001
+A'BC'  010
+A'BC   011
+AB'C'  100
+AB'C   101
+ABC'   110
+ABC    111

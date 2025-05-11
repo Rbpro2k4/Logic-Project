@@ -1,0 +1,272 @@
+|SequenceDetector
+Led1 <= Led1:inst12.Led1
+SW4 => Led1:inst12.SW1L1
+SW4 => Flags:inst16.FSW4
+SW4 => Treset:inst.TSW4
+SW4 => Led2:inst13.SW1L2
+SW4 => Led3:inst14.SW1L3
+SW4 => Led4:inst15.SW1L4
+SW2 => Led1:inst12.SW3L1
+SW2 => Flags:inst16.FSW2
+SW2 => B:inst29.BSW2
+SW2 => Treset:inst.TSW2
+SW2 => C:inst30.CSW2
+SW2 => Led2:inst13.SW3L2
+SW2 => Led3:inst14.SW3L3
+SW2 => Led4:inst15.SW3L4
+SW1 => Led1:inst12.SW4L1
+SW1 => Flags:inst16.FSW1
+SW1 => B:inst29.BSW1
+SW1 => Treset:inst.TSW1
+SW1 => Led2:inst13.SW4L2
+SW1 => Led4:inst15.SW4L4
+SW3 => Flags:inst16.FSW3
+SW3 => Treset:inst.TSW3
+SW3 => Led2:inst13.SW2L2
+SW3 => Led3:inst14.SW2L3
+SW3 => Led4:inst15.SW2L4
+Clock => Treset:inst.TClock
+Clock => 7474:AB.1CLK
+Clock => 7474:AB.2CLK
+Clock => 7474:C.1CLK
+Led2 <= Led2:inst13.Led2
+Led3 <= Led3:inst14.Led3
+Led4 <= Led4:inst15.Led4
+seg1 <= 7segment:inst18.aO
+seg2 <= 7segment:inst18.bO
+seg3 <= 7segment:inst18.cO
+seg4 <= 7segment:inst18.dO
+seg5 <= 7segment:inst18.eO
+seg6 <= 7segment:inst18.fO
+seg7 <= 7segment:inst18.gO
+
+
+|SequenceDetector|Led1:inst12
+Led1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ABc6L1 => 4or6.IN0
+Abc4L1 => 4or6.IN1
+SW4L1 => SW4and4or6.IN1
+SW3L1 => SW3and5.IN0
+AbC5L1 => SW3and5.IN1
+SW1L1 => SW1and1or2.IN0
+aBC3L1 => 1or3.IN0
+abC1L1 => 1or3.IN1
+
+
+|SequenceDetector|Decoder:inst26
+abc0 <= Y0.DB_MAX_OUTPUT_PORT_TYPE
+Ai => 74138:inst.A
+Bi => 74138:inst.B
+Ci => 74138:inst.C
+abC1 <= Y1.DB_MAX_OUTPUT_PORT_TYPE
+aBc2 <= Y2.DB_MAX_OUTPUT_PORT_TYPE
+aBC3 <= Y3.DB_MAX_OUTPUT_PORT_TYPE
+Abc4 <= Y4.DB_MAX_OUTPUT_PORT_TYPE
+AbC5 <= Y5.DB_MAX_OUTPUT_PORT_TYPE
+ABc6 <= Y6.DB_MAX_OUTPUT_PORT_TYPE
+ABC7 <= Y7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|Decoder:inst26|74138:inst
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|7474:AB
+1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1CLRN => 9.ACLR
+1CLK => 9.CLK
+1D => 9.DATAIN
+1PRN => 9.PRESET
+1QN <= 16.DB_MAX_OUTPUT_PORT_TYPE
+2Q <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2CLRN => 10.ACLR
+2CLK => 10.CLK
+2D => 10.DATAIN
+2PRN => 10.PRESET
+2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|B:inst29
+B <= OR4.DB_MAX_OUTPUT_PORT_TYPE
+BABC7 => ABcORaBCorABC.IN0
+BABc6 => ABcORaBC.IN0
+BaBC3 => ABcORaBC.IN1
+BTreset => Tor12.IN0
+BTreset => TorAbc.IN1
+BSW1 => 12.IN0
+BSW2 => 12.IN1
+BSW2 => 2pabc.IN0
+BAbC5 => Tor12andAbC.IN1
+BAbc4 => TorAbc.IN0
+Babc0 => 2pabc.IN1
+BF1 => F1nxorF2.IN0
+BF2 => F1nxorF2.IN1
+BaBc2 => xnorANDaBc.IN1
+
+
+|SequenceDetector|Flags:inst16
+F1 <= 7474:inst.1Q
+FSW1 => SW1p.IN0
+FSW1 => 12p.IN0
+FSW2 => 1p2.IN1
+FSW2 => SW2p.IN0
+FSW3 => SW3p.IN0
+FSW3 => 34p.IN0
+FSW4 => SW4p.IN0
+FSW4 => 3p4.IN1
+F2 <= 7474:inst.2Q
+F1p <= 7474:inst.1QN
+F2p <= 7474:inst.2QN
+
+
+|SequenceDetector|Flags:inst16|7474:inst
+1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1CLRN => 9.ACLR
+1CLK => 9.CLK
+1D => 9.DATAIN
+1PRN => 9.PRESET
+1QN <= 16.DB_MAX_OUTPUT_PORT_TYPE
+2Q <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2CLRN => 10.ACLR
+2CLK => 10.CLK
+2D => 10.DATAIN
+2PRN => 10.PRESET
+2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|Treset:inst
+Treset <= Y.DB_MAX_OUTPUT_PORT_TYPE
+TaBc2 => I.IN0
+TSW4 => SW3SW4.IN0
+TSW3 => SW3SW4.IN1
+TSW2 => SW1SW2.IN0
+TSW1 => SW1SW2.IN1
+TClock => 7474:inst.1CLK
+TClock => 7474:inst.2CLK
+TresetP <= SW1p1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|Treset:inst|7474:inst
+1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1CLRN => 9.ACLR
+1CLK => 9.CLK
+1D => 9.DATAIN
+1PRN => 9.PRESET
+1QN <= 16.DB_MAX_OUTPUT_PORT_TYPE
+2Q <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2CLRN => 10.ACLR
+2CLK => 10.CLK
+2D => 10.DATAIN
+2PRN => 10.PRESET
+2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|A:inst28
+A <= Aout.DB_MAX_OUTPUT_PORT_TYPE
+AABC7 => 4or5or6or7.IN0
+AABc6 => 4or5or6.IN0
+AAbC5 => 4or5.IN0
+AAbc4 => 4or5.IN1
+ATreset => Tp.IN0
+AF2 => F1orF2.IN0
+AF1 => F1orF2.IN1
+AaBc => 2andF1orF2.IN1
+
+
+|SequenceDetector|7474:C
+1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1CLRN => 9.ACLR
+1CLK => 9.CLK
+1D => 9.DATAIN
+1PRN => 9.PRESET
+1QN <= 16.DB_MAX_OUTPUT_PORT_TYPE
+2Q <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2CLRN => 10.ACLR
+2CLK => 10.CLK
+2D => 10.DATAIN
+2PRN => 10.PRESET
+2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|C:inst30
+C <= OR3.DB_MAX_OUTPUT_PORT_TYPE
+CABC7 => aBCorAbCorABC.IN0
+CAbC5 => aBCorAbC.IN0
+CaBC3 => aBCorAbC.IN1
+CTreset => TrestANDaBCorAbCorABC.IN1
+FC2 => inst.IN0
+CaBc2 => F2paBc.IN1
+CabC1 => OR1.IN0
+CSW2 => 2abc.IN0
+Cabc0 => 2abc.IN1
+
+
+|SequenceDetector|Led2:inst13
+Led2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ABC7L2 => 4or7.IN0
+AbC5L2 => 4or7.IN1
+SW4L2 => SW3and7.IN1
+ABc6L2 => SW3and6.IN0
+SW3L2 => SW3and6.IN1
+SW2L2 => SW2and4.IN0
+Abc4L2 => SW2and4.IN1
+SW1L2 => SW1and1or3.IN0
+aBC3L2 => 1or3.IN0
+abC1L2 => 1or3.IN1
+
+
+|SequenceDetector|Led3:inst14
+Led3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ABC7L3 => 5or7.IN0
+AbC5L3 => 5or7.IN1
+SW3L3 => SW3and7.IN1
+SW3L3 => SW3and6.IN0
+ABc6L3 => SW3and6.IN1
+aBC3L3 => 1or3.IN0
+abC1L3 => 1or3.IN1
+SW2L3 => SW2and1or3.IN1
+SW1L3 => SW1and4.IN0
+Abc4L3 => SW1and4.IN1
+
+
+|SequenceDetector|Led4:inst15
+Led4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+SW4L4 => Sw4and1or3.IN0
+aBC2L4 => 1or3.IN0
+abC1L4 => 1or3.IN1
+Abc4L4 => Sw3and4.IN0
+SW3L4 => Sw3and4.IN1
+ABC7L4 => 5or7.IN0
+AbC5L4 => 5or7.IN1
+SW2L4 => Sw2and5or7.IN1
+SW1L4 => SW1and6.IN0
+ABc6L4 => SW1and6.IN1
+
+
+|SequenceDetector|7segment:inst18
+aO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+B => Bc2.IN0
+bO <= <VCC>
+cO <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+C => inst2.IN0
+dO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+eO <= bc.DB_MAX_OUTPUT_PORT_TYPE
+fO <= Bc2.DB_MAX_OUTPUT_PORT_TYPE
+gO <= A.DB_MAX_OUTPUT_PORT_TYPE
+A => gO.DATAIN
+
+

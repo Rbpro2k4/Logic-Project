@@ -1,0 +1,220 @@
+Simulator report for SequenceDetector
+Fri May 09 12:40:54 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 8.0 s        ;
+; Simulation Netlist Size     ; 42 nodes     ;
+; Simulation Coverage         ;      43.59 % ;
+; Total Number of Transitions ; 60           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C3T100C6  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      43.59 % ;
+; Total nodes checked                                 ; 42           ;
+; Total output ports checked                          ; 39           ;
+; Total output ports with complete 1/0-value coverage ; 17           ;
+; Total output ports with no 1/0-value coverage       ; 20           ;
+; Total output ports with no 1-value coverage         ; 20           ;
+; Total output ports with no 0-value coverage         ; 22           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                ;
++--------------------------------------------+--------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                           ; Output Port Type ;
++--------------------------------------------+--------------------------------------------+------------------+
+; |SequenceDetector|Led1:inst12|inst1~0      ; |SequenceDetector|Led1:inst12|inst1~0      ; combout          ;
+; |SequenceDetector|Led2:inst13|inst3~0      ; |SequenceDetector|Led2:inst13|inst3~0      ; combout          ;
+; |SequenceDetector|Led2:inst13|inst3~1      ; |SequenceDetector|Led2:inst13|inst3~1      ; combout          ;
+; |SequenceDetector|Led4:inst15|inst3~0      ; |SequenceDetector|Led4:inst15|inst3~0      ; combout          ;
+; |SequenceDetector|Led4:inst15|inst3~1      ; |SequenceDetector|Led4:inst15|inst3~1      ; combout          ;
+; |SequenceDetector|Treset:inst|7474:inst|10 ; |SequenceDetector|Treset:inst|7474:inst|10 ; regout           ;
+; |SequenceDetector|Treset:inst|I~0          ; |SequenceDetector|Treset:inst|I~0          ; combout          ;
+; |SequenceDetector|Treset:inst|Y            ; |SequenceDetector|Treset:inst|Y            ; combout          ;
+; |SequenceDetector|C:inst30|OR3~0           ; |SequenceDetector|C:inst30|OR3~0           ; combout          ;
+; |SequenceDetector|B:inst29|OR4~0           ; |SequenceDetector|B:inst29|OR4~0           ; combout          ;
+; |SequenceDetector|B:inst29|OR4~1           ; |SequenceDetector|B:inst29|OR4~1           ; combout          ;
+; |SequenceDetector|Flags:inst16|E           ; |SequenceDetector|Flags:inst16|E           ; combout          ;
+; |SequenceDetector|SW4                      ; |SequenceDetector|SW4~corein               ; combout          ;
+; |SequenceDetector|SW1                      ; |SequenceDetector|SW1~corein               ; combout          ;
+; |SequenceDetector|SW2                      ; |SequenceDetector|SW2~corein               ; combout          ;
+; |SequenceDetector|SW3                      ; |SequenceDetector|SW3~corein               ; combout          ;
+; |SequenceDetector|Clock                    ; |SequenceDetector|Clock~corein             ; combout          ;
++--------------------------------------------+--------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                             ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |SequenceDetector|7474:AB|9             ; |SequenceDetector|7474:AB|9             ; regout           ;
+; |SequenceDetector|Led1:inst12|inst1~1   ; |SequenceDetector|Led1:inst12|inst1~1   ; combout          ;
+; |SequenceDetector|Led2:inst13|inst3~2   ; |SequenceDetector|Led2:inst13|inst3~2   ; combout          ;
+; |SequenceDetector|Led3:inst14|inst2~0   ; |SequenceDetector|Led3:inst14|inst2~0   ; combout          ;
+; |SequenceDetector|Led3:inst14|inst2~1   ; |SequenceDetector|Led3:inst14|inst2~1   ; combout          ;
+; |SequenceDetector|Led4:inst15|inst3~2   ; |SequenceDetector|Led4:inst15|inst3~2   ; combout          ;
+; |SequenceDetector|7segment:inst18|bc    ; |SequenceDetector|7segment:inst18|bc    ; combout          ;
+; |SequenceDetector|7segment:inst18|Bc2   ; |SequenceDetector|7segment:inst18|Bc2   ; combout          ;
+; |SequenceDetector|A:inst28|2andF1orF2~0 ; |SequenceDetector|A:inst28|2andF1orF2~0 ; combout          ;
+; |SequenceDetector|Led1                  ; |SequenceDetector|Led1                  ; padio            ;
+; |SequenceDetector|Led2                  ; |SequenceDetector|Led2                  ; padio            ;
+; |SequenceDetector|Led3                  ; |SequenceDetector|Led3                  ; padio            ;
+; |SequenceDetector|Led4                  ; |SequenceDetector|Led4                  ; padio            ;
+; |SequenceDetector|seg1                  ; |SequenceDetector|seg1                  ; padio            ;
+; |SequenceDetector|seg2                  ; |SequenceDetector|seg2                  ; padio            ;
+; |SequenceDetector|seg3                  ; |SequenceDetector|seg3                  ; padio            ;
+; |SequenceDetector|seg4                  ; |SequenceDetector|seg4                  ; padio            ;
+; |SequenceDetector|seg5                  ; |SequenceDetector|seg5                  ; padio            ;
+; |SequenceDetector|seg6                  ; |SequenceDetector|seg6                  ; padio            ;
+; |SequenceDetector|seg7                  ; |SequenceDetector|seg7                  ; padio            ;
++-----------------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                     ;
++---------------------------------------------+---------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                            ; Output Port Type ;
++---------------------------------------------+---------------------------------------------+------------------+
+; |SequenceDetector|7474:AB|9                 ; |SequenceDetector|7474:AB|9                 ; regout           ;
+; |SequenceDetector|Led1:inst12|inst1~1       ; |SequenceDetector|Led1:inst12|inst1~1       ; combout          ;
+; |SequenceDetector|Led2:inst13|inst3~2       ; |SequenceDetector|Led2:inst13|inst3~2       ; combout          ;
+; |SequenceDetector|Led3:inst14|inst2~0       ; |SequenceDetector|Led3:inst14|inst2~0       ; combout          ;
+; |SequenceDetector|Led3:inst14|inst2~1       ; |SequenceDetector|Led3:inst14|inst2~1       ; combout          ;
+; |SequenceDetector|Led4:inst15|inst3~2       ; |SequenceDetector|Led4:inst15|inst3~2       ; combout          ;
+; |SequenceDetector|7segment:inst18|bc        ; |SequenceDetector|7segment:inst18|bc        ; combout          ;
+; |SequenceDetector|7segment:inst18|Bc2       ; |SequenceDetector|7segment:inst18|Bc2       ; combout          ;
+; |SequenceDetector|A:inst28|2andF1orF2~0     ; |SequenceDetector|A:inst28|2andF1orF2~0     ; combout          ;
+; |SequenceDetector|Flags:inst16|7474:inst|10 ; |SequenceDetector|Flags:inst16|7474:inst|10 ; regout           ;
+; |SequenceDetector|Flags:inst16|7474:inst|9  ; |SequenceDetector|Flags:inst16|7474:inst|9  ; regout           ;
+; |SequenceDetector|Led1                      ; |SequenceDetector|Led1                      ; padio            ;
+; |SequenceDetector|Led2                      ; |SequenceDetector|Led2                      ; padio            ;
+; |SequenceDetector|Led3                      ; |SequenceDetector|Led3                      ; padio            ;
+; |SequenceDetector|Led4                      ; |SequenceDetector|Led4                      ; padio            ;
+; |SequenceDetector|seg1                      ; |SequenceDetector|seg1                      ; padio            ;
+; |SequenceDetector|seg2                      ; |SequenceDetector|seg2                      ; padio            ;
+; |SequenceDetector|seg3                      ; |SequenceDetector|seg3                      ; padio            ;
+; |SequenceDetector|seg4                      ; |SequenceDetector|seg4                      ; padio            ;
+; |SequenceDetector|seg5                      ; |SequenceDetector|seg5                      ; padio            ;
+; |SequenceDetector|seg6                      ; |SequenceDetector|seg6                      ; padio            ;
+; |SequenceDetector|seg7                      ; |SequenceDetector|seg7                      ; padio            ;
++---------------------------------------------+---------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri May 09 12:40:54 2025
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SequenceDetector -c SequenceDetector
+Info: Using vector source file "C:/altera/91sp2/quartus/Project Quartus/SequenceDetector/SequenceDetector.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      43.59 %
+Info: Number of transitions in simulation is 60
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Fri May 09 12:40:54 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

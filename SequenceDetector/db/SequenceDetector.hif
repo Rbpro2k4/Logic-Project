@@ -1,0 +1,306 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+44
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+7474
+# storage
+db|SequenceDetector.(1).cnf
+db|SequenceDetector.(1).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|others|maxplus2|7474.bdf
+a982f9dfb307a85efbd6af71d3adf
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+7474:AB
+Flags:inst16|7474:inst
+Treset:inst|7474:inst
+7474:C
+}
+# macro_sequence
+
+# end
+# entity
+B
+# storage
+db|SequenceDetector.(2).cnf
+db|SequenceDetector.(2).cnf
+# case_insensitive
+# source_file
+b.bdf
+8d59257b4058edcdc0219ce17f2af627
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+B:inst29
+}
+# macro_sequence
+
+# end
+# entity
+Decoder
+# storage
+db|SequenceDetector.(4).cnf
+db|SequenceDetector.(4).cnf
+# case_insensitive
+# source_file
+decoder.bdf
+f5fe47601cedf1e9468a1cc3783b8dab
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Decoder:inst26
+}
+# macro_sequence
+
+# end
+# entity
+74138
+# storage
+db|SequenceDetector.(5).cnf
+db|SequenceDetector.(5).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|others|maxplus2|74138.bdf
+32dc8fd1db23180dae8214abe35379
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Decoder:inst26|74138:inst
+}
+# macro_sequence
+
+# end
+# entity
+C
+# storage
+db|SequenceDetector.(6).cnf
+db|SequenceDetector.(6).cnf
+# case_insensitive
+# source_file
+c.bdf
+939337b240cb88a49be2c7bdec971c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+C:inst30
+}
+# macro_sequence
+
+# end
+# entity
+A
+# storage
+db|SequenceDetector.(8).cnf
+db|SequenceDetector.(8).cnf
+# case_insensitive
+# source_file
+a.bdf
+d196aa36a6f16abb559c926fbf3feb5a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+A:inst28
+}
+# macro_sequence
+
+# end
+# entity
+Flags
+# storage
+db|SequenceDetector.(3).cnf
+db|SequenceDetector.(3).cnf
+# case_insensitive
+# source_file
+flags.bdf
+7a09de244ae1471ac7661b0164ec4e0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Flags:inst16
+}
+# macro_sequence
+
+# end
+# entity
+Treset
+# storage
+db|SequenceDetector.(7).cnf
+db|SequenceDetector.(7).cnf
+# case_insensitive
+# source_file
+treset.bdf
+5620a2254419b916157df9f59dea2ef
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Treset:inst
+}
+# macro_sequence
+
+# end
+# entity
+Led1
+# storage
+db|SequenceDetector.(9).cnf
+db|SequenceDetector.(9).cnf
+# case_insensitive
+# source_file
+led1.bdf
+e582a514191d672b76aff8ebdbe475
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Led1:inst12
+}
+# macro_sequence
+
+# end
+# entity
+Led2
+# storage
+db|SequenceDetector.(10).cnf
+db|SequenceDetector.(10).cnf
+# case_insensitive
+# source_file
+led2.bdf
+d1ce3dfc91418c1f4aacac8d2c2f6e70
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Led2:inst13
+}
+# macro_sequence
+
+# end
+# entity
+Led3
+# storage
+db|SequenceDetector.(11).cnf
+db|SequenceDetector.(11).cnf
+# case_insensitive
+# source_file
+led3.bdf
+3033778ae320fe575e4cfb8140b3b741
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Led3:inst14
+}
+# macro_sequence
+
+# end
+# entity
+Led4
+# storage
+db|SequenceDetector.(12).cnf
+db|SequenceDetector.(12).cnf
+# case_insensitive
+# source_file
+led4.bdf
+34ee8cb1551b261c80a52ea56ac779b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Led4:inst15
+}
+# macro_sequence
+
+# end
+# entity
+SequenceDetector
+# storage
+db|SequenceDetector.(0).cnf
+db|SequenceDetector.(0).cnf
+# case_insensitive
+# source_file
+sequencedetector.bdf
+faf834acb4b825d716905dbcb1cbdbc1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+7segment
+# storage
+db|SequenceDetector.(13).cnf
+db|SequenceDetector.(13).cnf
+# case_insensitive
+# source_file
+7segment.bdf
+a8c769a335a5aba2913c981dff1095a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+7segment:inst18
+}
+# macro_sequence
+
+# end
+# complete
+
